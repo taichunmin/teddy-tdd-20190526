@@ -11,6 +11,12 @@ class Invoice {
     this.tax = Math.round(taxIncludedPrice / (1 + this.rate) * this.rate)
     this.untaxedPrice = Math.round(taxIncludedPrice / (1 + this.rate))
   }
+
+  setUntaxedPrice (untaxedPrice) {
+    this.untaxedPrice = untaxedPrice
+    this.tax = Math.round(untaxedPrice * this.rate)
+    this.taxIncludedPrice = Math.round(untaxedPrice * (1 + this.rate))
+  }
 }
 
 module.exports = Invoice
