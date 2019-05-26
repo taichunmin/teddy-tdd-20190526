@@ -25,3 +25,15 @@ test('用含稅價格計算稅金，需要四捨五入', async () => {
   expect(invoice.tax).toEqual(5)
   expect(invoice.untaxedPrice).toEqual(94)
 })
+
+test('含稅價格 10 塊免稅', async () => {
+  // act
+  let invoice = new Invoice(VAT_RATE)
+  invoice.setTaxIncludedPrice(10)
+
+  // assert
+  expect(invoice.rate).toEqual(VAT_RATE)
+  expect(invoice.taxIncludedPrice).toEqual(10)
+  expect(invoice.tax).toEqual(0)
+  expect(invoice.untaxedPrice).toEqual(10)
+})
