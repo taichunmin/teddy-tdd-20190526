@@ -9,6 +9,7 @@ class Invoice {
   setTaxIncludedPrice (taxIncludedPrice) {
     this.taxIncludedPrice = taxIncludedPrice
     this.tax = 810
+    this.untaxedPrice = 16190
   }
 }
 
