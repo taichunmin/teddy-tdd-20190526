@@ -8,8 +8,8 @@ class Invoice {
 
   setTaxIncludedPrice (taxIncludedPrice) {
     this.taxIncludedPrice = taxIncludedPrice
-    this.tax = 810
-    this.untaxedPrice = 16190
+    this.tax = Math.round(taxIncludedPrice / (1 + this.rate) * this.rate)
+    this.untaxedPrice = Math.round(taxIncludedPrice / (1 + this.rate))
   }
 }
 
