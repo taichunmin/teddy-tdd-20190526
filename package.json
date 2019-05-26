@@ -1,0 +1,13 @@
+{
+  "name": "teddy-tdd-20190526",
+  "version": "1.0.0",
+  "description": "teddy tdd class",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
